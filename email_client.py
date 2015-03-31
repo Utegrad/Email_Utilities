@@ -9,7 +9,7 @@ import sys
 import smtplib
 from email.mime.text import MIMEText
 
-#
+
 class EmailClient():
     def __init__(self, msg_file=None,rcpt_addr=None, msg_sender=None,
                  msg_subject=None, username=None, password=None, snd_host='localhost',
@@ -35,7 +35,7 @@ class EmailClient():
             filename = other_file
         f = open(filename, 'rb')
         msg = MIMEText(f.read())
-        f.close
+        f.close()
         return msg
 
     def send_msg(self):
